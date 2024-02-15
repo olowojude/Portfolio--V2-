@@ -1,0 +1,798 @@
+@font-face {
+  font-family: "Montserrat Alternates";
+  src: url("../../assets/font/MontserratAlternates-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/font/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "Helmet";
+  src: url("../../assets/font/Helmet-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #aaaaaa;
+  cursor: pointer;
+  transition: 0.5s;
+}
+a:hover {
+  color: black;
+}
+
+.hero-section {
+  height: 100vh;
+  max-width: 100%;
+  background: #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat Alternates";
+  color: #aaaaaa;
+}
+.hero-section .hero-section-content {
+  font-size: 3em;
+}
+.hero-section .hero-section-content .notification {
+  font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  position: absolute;
+  bottom: 10%;
+}
+.hero-section .hero-section-content .notification .dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(45, 160, 45);
+  border-radius: 50%;
+}
+.hero-section .hero-section-content .notification .dot:before {
+  content: "";
+  width: inherit;
+  height: inherit;
+  border: 5px solid rgb(45, 160, 45);
+  border-radius: inherit;
+  position: absolute;
+  z-index: 1000;
+  opacity: 0;
+  animation: 2s move cubic-bezier(0.29, 0, 0, 1) infinite;
+  animation-delay: 0.5s;
+}
+@keyframes move {
+  /* Starting at 1 to prevent IOS flicker */
+  1% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 500%;
+    height: 500%;
+    opacity: 0;
+    border-color: #fff;
+    background-color: none;
+    border-width: 5px;
+  }
+}
+.hero-section nav {
+  font-size: 2em;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  padding: 4em;
+  width: 80%;
+  display: flex;
+  background-color: #cccccc;
+  transform: translateY(-120%);
+  position: absolute;
+  transition: 1s;
+  border-radius: 0.5em;
+  font-family: "Helmet";
+  z-index: 100000;
+}
+.hero-section nav svg {
+  color: #aaaaaa;
+}
+.hero-section nav .close {
+  position: absolute;
+  display: block;
+  top: 10%;
+  right: 15%;
+  width: 1em;
+}
+.hero-section nav ul li a {
+  background: linear-gradient(0deg, black, black);
+  background-repeat: no-repeat;
+  background-size: 0 2px;
+  background-position: bottom;
+  transition: 0.3s ease-in;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-section nav ul li a:hover {
+  background: linear-gradient(0deg, black, black);
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position: bottom;
+}
+
+/* SECOND SECTION */
+.second-section {
+  background-color: #cccccc;
+  height: 100vh;
+  position: relative;
+  font-family: "Helmet";
+  padding: 0 6em;
+  position: relative;
+}
+.second-section .second-section-content .second-section-text-container {
+  font-size: 5em;
+  padding-top: 1em;
+  color: #aaaaaa;
+  font-weight: 900;
+}
+.second-section .second-section-content .second-section-text-container .intro-break {
+  padding-left: 4em;
+  padding-top: 1em;
+  display: block;
+}
+.second-section .second-section-content .bitmoji {
+  width: 2em;
+  position: absolute;
+  left: 40%;
+  top: 10%;
+}
+.second-section .second-section-content .arrows-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  position: absolute;
+  bottom: 20%;
+}
+.second-section .second-section-content .arrows-container .arrow {
+  position: absolute;
+  width: 3em;
+  height: 0.5em;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: move-arrow 2s ease-out infinite;
+}
+.second-section .second-section-content .arrows-container .arrow:first-child {
+  animation: move-arrow 2s ease-out 0.5s infinite;
+}
+.second-section .second-section-content .arrows-container .arrow:nth-child(2) {
+  animation: move-arrow 2s ease-out 1s infinite;
+}
+.second-section .second-section-content .arrows-container .arrow:before, .second-section .second-section-content .arrows-container .arrow:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #2c3e50;
+}
+.second-section .second-section-content .arrows-container .arrow:before {
+  left: 0;
+  transform: skewY(30deg);
+}
+.second-section .second-section-content .arrows-container .arrow:after {
+  right: 0;
+  width: 50%;
+  transform: skewY(-30deg);
+}
+@keyframes move-arrow {
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    transform: translateY(2.28rem);
+  }
+  66.6% {
+    opacity: 1;
+    transform: translateY(3.12rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(4.8rem) scale(0.5);
+  }
+}
+
+.about-me-section {
+  background-color: #dddddd;
+  height: auto;
+  font-family: "Montserrat Alternates", "Gilroy-Light";
+}
+.about-me-section .about-me-section-content {
+  padding: 4em 6em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.about-me-section .about-me-section-content img {
+  width: 25em;
+  height: auto;
+  object-fit: contain;
+  display: inline-block;
+}
+.about-me-section .about-me-section-content .about-me-section-text-container .title-heading {
+  color: #aaaaaa;
+}
+.about-me-section .about-me-section-content .about-me-section-text-container .title-heading .title {
+  font-size: 7em;
+  font-weight: 900;
+}
+.about-me-section .about-me-section-content .about-me-section-text-container .title-heading .smaller-title {
+  font-size: 2em;
+  padding-left: 2em;
+}
+.about-me-section .about-me-section-content p {
+  text-align: justify;
+  padding-left: 4em;
+  padding-top: 1em;
+  width: 70%;
+  font-family: "Poppins";
+}
+
+.rotating-link a {
+  font-size: 2em;
+  display: block;
+  padding-top: 1em;
+  padding-left: 2em;
+  color: black;
+  transition: 0.2s ease-in-out;
+  text-decoration: underline;
+}
+.rotating-link:hover a {
+  transform: scale(0.95);
+}
+.rotating-link:hover svg {
+  transform: rotate(-90deg);
+}
+
+.svg {
+  width: 0.6em;
+  vertical-align: middle;
+  transform: rotate(220deg);
+  transition: 0.2s ease-in-out;
+}
+
+.tech-stack-marquee {
+  padding: 1em 0;
+  font-size: 2em;
+  font-family: "Helmet";
+  color: #aaaaaa;
+  height: auto;
+}
+
+.projects-section {
+  height: auto;
+  background-color: #cccccc;
+  padding: 4em 6em;
+}
+.projects-section .projects-section-content-container {
+  padding: 4em 0em;
+}
+.projects-section .projects-section-content-container .projects-heading {
+  font-size: 3em;
+  font-family: "Helmet";
+  color: #aaaaaa;
+  font-weight: 700;
+}
+.projects-section .projects-section-content-container .projects-heading img {
+  width: 1em;
+  margin-bottom: -0.7em;
+  display: inline-block;
+}
+.projects-section .projects-list {
+  width: 100%;
+  padding: 2em 0em 0;
+}
+
+.projects-list .horizontal-line {
+  height: 1px;
+  background-color: #E6E6E6;
+  width: 100%;
+  margin: 0 auto;
+  background-image: linear-gradient(left, white 2%, #E6E6E6 50%, white 98%);
+  background-image: -o-linear-gradient(left, white 2%, #E6E6E6 50%, white 98%);
+  background-image: -moz-linear-gradient(left, white 2%, #E6E6E6 50%, white 98%);
+  background-image: -webkit-linear-gradient(left, white 2%, #E6E6E6 50%, white 98%);
+  background-image: -ms-linear-gradient(left, white 2%, #E6E6E6 50%, white 98%);
+  background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0.02, #cccccc), color-stop(0.5, gray), color-stop(0.98, #cccccc));
+}
+.projects-list section {
+  height: auto;
+  font-family: "Poppins", "Gilroy-Light";
+}
+.projects-list section h1 {
+  font-size: 2em;
+}
+
+.individual-project {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2em;
+  height: 100%;
+  padding-top: 1em;
+  padding-bottom: 4em;
+  font-family: "Helmet";
+}
+.individual-project img {
+  width: 30em;
+  height: auto;
+  object-fit: cover;
+  display: inline-block;
+  margin: auto 0;
+}
+.individual-project .project-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+}
+.individual-project .project-description .project-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.individual-project .project-description .project-title .view-project {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+}
+.individual-project .project-description .project-title .view-project svg {
+  width: 1em;
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -0.5em;
+}
+.individual-project .project-description .project-title .view-project:hover a {
+  color: black;
+}
+.individual-project .project-description .project-title .view-project:hover svg {
+  color: black;
+  transform: translate(10px, -5px);
+}
+.individual-project .project-info {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 3em;
+}
+.individual-project .project-info .project-features {
+  width: 100%;
+  text-align: justify;
+  font-size: 0.9em;
+}
+.individual-project .project-info .project-features h3 {
+  padding-bottom: 0.5em;
+}
+.individual-project .project-info .project-stack {
+  font-size: 0.6em;
+  align-self: center;
+}
+
+.explore-link {
+  text-align: center;
+  font-family: "Helmet";
+  display: block;
+}
+.explore-link svg {
+  vertical-align: middle;
+  margin-top: -0.2em;
+  transition: 0.3s;
+}
+.explore-link:hover svg {
+  transform: translate(20px, -10px);
+}
+
+.technical-writing-section {
+  height: 100vh;
+  background-color: #cccccc;
+  font-family: "Helmet";
+  padding: 1em 6em;
+}
+.technical-writing-section .technical-writing-section-content .technical-writing-section-heading {
+  font-size: 3em;
+  font-family: "Poppins";
+  font-weight: 700;
+  color: #aaaaaa;
+}
+.technical-writing-section .technical-writing-section-content .technical-writing-section-heading img {
+  width: 2em;
+  display: inline-block;
+  margin-bottom: -1em;
+  transform: rotate(20deg);
+}
+
+.contact {
+  height: 100vh;
+  background-color: #dddddd;
+  font-family: "Poppins";
+  position: relative;
+  padding: 8em 6em;
+}
+.contact .contact-heading {
+  font-size: 4em;
+  font-weight: 700;
+  color: #aaaaaa;
+  text-align: center;
+}
+.contact .send-email {
+  display: block;
+  padding: 2em 4em;
+  width: fit-content;
+  border-radius: 30px;
+  margin: 4em auto;
+  background-color: #cccccc;
+  transition: 0.5s;
+}
+.contact .send-email:hover {
+  transform: scale(0.9);
+  color: #aaaaaa;
+}
+.contact .icons {
+  position: absolute;
+  bottom: 5%;
+}
+.contact .icons img {
+  width: 2em;
+}
+
+.footer {
+  padding: 1em 6em;
+  font-family: "Helmet";
+  background-color: #cccccc;
+  color: #aaaaaa;
+  text-align: center;
+}
+.footer .back-to-top {
+  text-decoration: underline;
+}
+.footer .back-to-top:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1150px) {
+  .preloader-text {
+    font-size: 2em;
+  }
+  .hero-section {
+    padding: 2em 4em;
+  }
+  .hero-section .hero-content-container {
+    padding-top: 18em;
+  }
+  .hero-section .hero-content-container .down-links {
+    width: 100%;
+  }
+  .second-section .second-section-content .second-section-text-container {
+    font-size: 5em;
+    padding-left: 0.5em;
+    padding-top: 1em;
+  }
+  .second-section .second-section-content .bitmoji {
+    left: 50%;
+    top: 10%;
+    position: absolute;
+  }
+  .about-me-section .about-me-section-content {
+    padding: 4em;
+  }
+  .projects-section {
+    padding: 4em;
+  }
+  .contact {
+    padding: 6em 4em;
+  }
+}
+@media screen and (max-width: 1000px), screen and (min-height: 800px) {
+  .second-section {
+    padding: 5em 4em;
+  }
+  .contact {
+    padding-top: 18em;
+  }
+}
+@media screen and (max-width: 900px) {
+  .hero-content-container .hero-nav-links {
+    font-size: 1em;
+  }
+  .hero-content-container .down-links {
+    width: 100%;
+  }
+  .hero-section .hero-text {
+    font-size: 2em;
+  }
+  .second-section {
+    height: 50vh;
+  }
+  .second-section .second-section-content .second-section-text-container {
+    font-size: 4em;
+  }
+  .second-section .second-section-content .second-section-text-container .intro-break {
+    padding-left: 2em;
+  }
+  .second-section .second-section-content .bitmoji {
+    left: 55%;
+    top: 22%;
+  }
+  .second-section .second-section-content .arrows-container {
+    position: absolute;
+    width: 85%;
+  }
+  .about-me-section .about-me-section-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-me-section .about-me-section-content img {
+    display: block;
+    margin: 0 auto;
+    width: 30em;
+  }
+  .about-me-section .about-me-section-content .about-me-section-text-container {
+    padding-left: 2em;
+  }
+  .about-me-section .about-me-section-content .about-me-section-text-container p {
+    width: 80%;
+  }
+  .individual-project {
+    grid-template-columns: 1fr;
+  }
+  .individual-project img {
+    display: block;
+    width: 100%;
+  }
+  .individual-project .project-info .project-features {
+    width: 100%;
+  }
+  .individual-project .project-info .project-features h3 {
+    padding-bottom: 1em;
+  }
+  .individual-project .project-info .project-stack {
+    font-size: 0.7em;
+    align-self: flex-end;
+  }
+  .contact .contact-heading {
+    font-size: 3.5em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .loader .preloader-text {
+    font-size: 3em;
+  }
+  .hero-section {
+    padding: 1em;
+  }
+  .hero-section .hero-content-container {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+  .hero-section .hero-content-container .hero-nav-links {
+    font-size: 1em;
+    position: absolute;
+    top: -40%;
+    left: 80%;
+  }
+  .hero-section .hero-content-container .hero-text {
+    font-size: 1.7em;
+    text-align: justify;
+    width: 100%;
+  }
+  .second-section {
+    padding: 1em;
+    height: 50vh;
+  }
+  .second-section .second-section-content .second-section-text-container {
+    font-size: 2.5em;
+  }
+  .second-section .second-section-content .bitmoji {
+    position: absolute;
+    left: 62%;
+    top: 10%;
+  }
+  .second-section .second-section-content .arrows-container {
+    width: 90%;
+  }
+  .second-section .second-section-content .arrows-container .arrow {
+    width: 2em;
+  }
+  .about-me-section .about-me-section-content {
+    padding: 2em 1em;
+  }
+  .about-me-section .about-me-section-content img {
+    width: 22em;
+  }
+  .about-me-section .about-me-section-content .about-me-section-text-container .title-heading .title {
+    font-size: 4em;
+  }
+  .about-me-section .about-me-section-content .about-me-section-text-container .title-heading .smaller-title {
+    padding-left: 0em;
+    font-size: 1.5em;
+  }
+  .about-me-section .about-me-section-content .about-me-section-text-container p {
+    padding-left: 0em;
+    width: 85%;
+  }
+  .about-me-section .tech-stack-marquee {
+    font-size: 1em;
+  }
+  .projects-section {
+    padding: 1em;
+  }
+  .projects-section .projects-section-content-container {
+    padding: 2em 0em;
+  }
+  .projects-section .projects-section-content-container .projects-heading {
+    font-size: 2em;
+  }
+  .projects-section .projects-list .individual-project {
+    grid-template-columns: 1fr;
+  }
+  .projects-section .projects-list .individual-project .project-info {
+    grid-template-columns: 1fr;
+  }
+  .projects-section .projects-list .individual-project .project-info .project-info {
+    width: 100%;
+  }
+  .projects-section .projects-list .individual-project .project-info .project-features h3 {
+    padding: 1em 0em;
+  }
+  .rotating-link a {
+    padding-left: 0em;
+    font-size: 1.5em;
+  }
+  .second-rotating-link a {
+    padding-left: 0em;
+    font-size: 1em;
+  }
+  .contact {
+    padding: 10em 1em;
+    height: 80vh;
+  }
+  .contact .contact-heading {
+    font-size: 1.5em;
+  }
+  .contact .send-email {
+    padding: 1.5em 3em;
+    border-radius: 20px;
+  }
+  .footer {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .hero-section .hero-content-container .hero-nav-links {
+    top: -30%;
+    left: 80%;
+  }
+  .hero-section .hero-content-container .hero-text {
+    font-size: 1.5em;
+  }
+  .hero-section .hero-content-container .down-links {
+    font-size: 1em;
+  }
+  .about-me-section .about-me-section-content img {
+    width: 20em;
+  }
+  .about-me-section .about-me-section-content .about-me-section-text-container .title-heading .title {
+    font-size: 3em;
+  }
+  .about-me-section .about-me-section-content .about-me-section-text-container .title-heading .smaller-title {
+    font-size: 1.5em;
+  }
+  .about-me-section .about-me-section-content .about-me-section-text-container p {
+    font-size: 0.9em;
+  }
+  .about-me-section .about-me-section-content .about-me-section-text-container .rotating-link {
+    font-size: 1em;
+  }
+  .about-me-section .tech-stack-marquee {
+    font-size: 0.8em;
+  }
+  .projects-section .projects-list .individual-project .project-description .project-title h1 {
+    font-size: 1.5em;
+  }
+  .projects-section .projects-list .individual-project .project-description .project-info .project-features h3 {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 350px) {
+  .hero-section .hero-content-container {
+    padding-top: 15em;
+  }
+  .hero-section .hero-content-container .hero-nav-links {
+    position: absolute;
+    top: 0%;
+    left: 80%;
+  }
+  .hero-section .hero-content-container .hero-text {
+    font-size: 1.2em;
+  }
+  .hero-section .hero-content-container .down-links {
+    font-size: 0.8em;
+  }
+  .second-section {
+    height: 70vh;
+  }
+  .second-section .second-section-content .second-section-text-container {
+    font-size: 2em;
+  }
+  .about-me-section .about-me-section-content img {
+    width: 16em;
+  }
+  .about-me-section .about-me-section-content .about-me-section-text-container .title-heading .title {
+    font-size: 2.5em;
+  }
+  .about-me-section .about-me-section-content .about-me-section-text-container .title-heading .smaller-title {
+    font-size: 1.1em;
+  }
+  .about-me-section .about-me-section-content .about-me-section-text-container .rotating-link {
+    font-size: 0.8em;
+  }
+  .contact {
+    padding: 4em 1em;
+  }
+  .contact .contact-heading {
+    font-size: 1.2em;
+  }
+  .footer {
+    font-size: 0.6em;
+  }
+}
+.notification {
+  font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.notification .dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  background-color: #ce2b37;
+  border-radius: 50%;
+  position: relative;
+}
+.notification .dot:before {
+  content: "";
+  width: inherit;
+  height: inherit;
+  border: 5px solid black;
+  border-radius: inherit;
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+  animation: 2s expand cubic-bezier(0.29, 0, 0, 1) infinite;
+  animation-delay: 1s;
+}
+
+/*# sourceMappingURL=main.css.map */
