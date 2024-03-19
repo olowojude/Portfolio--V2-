@@ -41,13 +41,13 @@ a {
     }
 }
 
-
+// PRELOADER
 
 // HERO SECTION
 
 .hero-section {
     height: 100vh;
-    max-width: 100%;
+    // max-width: 100%;
     background: #dddddd;
     display: flex;
     align-items: center;
@@ -58,6 +58,15 @@ a {
 
     .hero-section-content {
         font-size: 3em;
+
+        .hero-text {
+            height: 2em;
+        }
+
+        .ideas,
+        .life {
+            color: #555555;
+        }
 
         .notification {
             font-size: .5em;
@@ -120,7 +129,7 @@ a {
         justify-content: center;
         height: 90vh;
         padding: 4em;
-        width: 80%;
+        width: 90%;
         display: flex;
         background-color: #cccccc;
         transform: translateY(-120%);
@@ -131,7 +140,7 @@ a {
         z-index: 100000;
 
         svg {
-            color: #aaaaaa;
+            color: black;
         }
 
         .close {
@@ -141,11 +150,10 @@ a {
             right: 15%;
             width: 1em;
 
-
         }
 
         ul li a {
-            background: linear-gradient(0deg, black, black);
+            background: linear-gradient(0deg, #555555, #555555);
             background-repeat: no-repeat;
             background-size: 0 2px;
             background-position: bottom;
@@ -156,10 +164,11 @@ a {
             align-items: center;
 
             &:hover {
-                background: linear-gradient(0deg, black, black);
+                background: linear-gradient(0deg, #777777, #777777);
                 background-repeat: no-repeat;
                 background-size: 100% 2px;
                 background-position: bottom;
+                color: #777777;
             }
         }
     }
@@ -231,7 +240,7 @@ a {
                     top: 0;
                     height: 100%;
                     width: 50%;
-                    background: #2c3e50;
+                    background: #555555;
                 }
 
                 &:before {
@@ -272,8 +281,6 @@ a {
 
 }
 
-
-
 // ABOUT SECTION
 .about-me-section {
     background-color: #dddddd;
@@ -281,7 +288,6 @@ a {
     font-family: 'Montserrat Alternates', 'Gilroy-Light';
 
     .about-me-section-content {
-        // point
         padding: 4em 6em;
         display: flex;
         flex-direction: row;
@@ -375,6 +381,11 @@ a {
             font-family: 'Helmet';
             color: #aaaaaa;
             font-weight: 700;
+            display: block;
+
+            img {
+                display: inline-block;
+            }
 
             img {
                 width: 1em;
@@ -443,6 +454,7 @@ a {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            height: 4em;
 
             .view-project {
                 display: flex;
@@ -511,13 +523,11 @@ a {
 
 // TECHNICAL WRITING SECTION
 .technical-writing-section {
-    height: 100vh;
     background-color: #cccccc;
     font-family: 'Helmet';
     padding: 1em 6em;
 
     .technical-writing-section-content {
-
 
         .technical-writing-section-heading {
             font-size: 3em;
@@ -532,12 +542,47 @@ a {
                 transform: rotate(20deg);
             }
         }
+
+        .articles-container {
+            padding: 6em 0;
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            .article {
+                display: flex;
+                align-items: center;
+                height: 15em;
+                width: 18em;
+                border-radius: 50px;
+                border: 2px solid #aaaaaa;
+                padding: 2em;
+                text-align: center;
+
+                &:hover {
+                    border: 2px solid #555555;
+                    color: #555555;
+
+                }
+            }
+
+            .explore-articles {
+                justify-self: center;
+                align-self: center;
+                padding-left: 4em;
+                display: inline-block;
+
+                svg {
+                    width: 1em;
+                }
+            }
+        }
     }
 }
 
 // CONTACT
 .contact {
-    height: 100vh;
+    // height: 100vh;
     background-color: #dddddd;
     font-family: 'Poppins';
 
@@ -563,7 +608,8 @@ a {
 
         &:hover {
             transform: scale(0.90);
-            color: #aaaaaa;
+            color: #dddddd;
+            background-color: #999999;
         }
     }
 
@@ -597,35 +643,19 @@ a {
 
 @media screen and (max-width: 1150px) {
 
-    // PRELOADER
-    .preloader-text {
-        font-size: 2em;
-    }
-
     // FIRST SECTION
-    .hero-section {
-        padding: 2em 4em;
-
-        .hero-content-container {
-            padding-top: 18em;
-
-            .down-links {
-                width: 100%;
-            }
-        }
-    }
 
     // SECOND SECTION
     .second-section {
         .second-section-content {
             .second-section-text-container {
-                font-size: 5em;
+                font-size: 4em;
                 padding-left: .5em;
                 padding-top: 1em;
             }
 
             .bitmoji {
-                left: 50%;
+                left: 40%;
                 top: 10%;
                 position: absolute;
             }
@@ -668,25 +698,26 @@ screen and (min-height: 800px) {
 @media screen and (max-width: 900px) {
 
     // FIRST SECTION
-    .hero-content-container {
-        .hero-nav-links {
-            font-size: 1em;
-        }
-
-        .down-links {
-            width: 100%;
-        }
-    }
-
     .hero-section {
-        .hero-text {
-            font-size: 2em;
+
+        .hero-section-content {
+            padding: 0 2em;
+            font-size: 1.5em;
+
+            .hero-text {
+                font-size: 2em;
+            }
+
+            .notification {
+                font-size: 1em;
+            }
         }
+
     }
 
     // SECOND SECTION
     .second-section {
-        height: 50vh;
+        height: 80vh;
 
         .second-section-content {
             .second-section-text-container {
@@ -758,10 +789,43 @@ screen and (min-height: 800px) {
         }
     }
 
+    // TECHNICAL WRITING SECTION
+
+    .technical-writing-section {
+        padding: 1em 4em;
+
+        .technical-writing-section-content {
+            .technical-writing-section-heading {
+                font-size: 2.5em;
+                text-align: center;
+                display: inline-block;
+            }
+
+            .articles-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                // how can i make the grid fit with any spaces on the right?
+                gap: 2em;
+
+
+
+                .explore-articles {
+                    padding-top: 4em;
+                    padding-left: 0;
+                }
+            }
+
+        }
+    }
+
+
     // CONTACT
     .contact {
+        padding: 4em 6em;
+        height: 70vh;
+
         .contact-heading {
-            font-size: 3.5em;
+            font-size: 3em;
         }
     }
 
@@ -769,43 +833,25 @@ screen and (min-height: 800px) {
 
 @media screen and (max-width: 500px) {
 
-    // PRELOADER
-    .loader {
-        .preloader-text {
-            font-size: 3em;
-
-        }
-    }
-
     // FIRST SECTION
     .hero-section {
         padding: 1em;
+        justify-content: flex-start;
 
-        .hero-content-container {
-            grid-template-columns: 1fr;
-            gap: 1em;
+        .hero-section-content {
+            font-size: 1.2em;
+            padding: 0 1em;
+        }
 
-            .hero-nav-links {
-                font-size: 1em;
-                position: absolute;
-                top: -40%;
-                left: 80%;
-            }
-
-            .hero-text {
-                font-size: 1.7em;
-                text-align: justify;
-
-                width: 100%;
-
-            }
+        nav {
+            font-size: 1.5em;
         }
     }
 
     // SECOND SECTION
     .second-section {
         padding: 1em;
-        height: 50vh;
+        height: 70vh;
 
         .second-section-content {
             .second-section-text-container {
@@ -891,10 +937,14 @@ screen and (min-height: 800px) {
                     }
                 }
             }
+
         }
+
     }
 
     .rotating-link {
+        font-size: 1.2em;
+
         a {
             padding-left: 0em;
             font-size: 1.5em;
@@ -905,8 +955,32 @@ screen and (min-height: 800px) {
         a {
             padding-left: 0em;
             font-size: 1em;
+
+            svg {
+                width: 1em;
+            }
         }
     }
+
+    // TECHNICAL WRITING SECTION
+    .technical-writing-section {
+
+        .technical-writing-section-content {
+
+            .technical-writing-section-heading {
+                padding-top: 2em;
+                font-size: 1.5em;
+            }
+
+            .articles-container {
+                display: flex;
+                flex-direction: column;
+                padding: 4em 0;
+
+            }
+        }
+    }
+
 
     // CONTACT SECTION
     .contact {
@@ -932,22 +1006,6 @@ screen and (min-height: 800px) {
 @media screen and (max-width: 400px) {
 
     // HERO SECTION
-    .hero-section {
-        .hero-content-container {
-            .hero-nav-links {
-                top: -30%;
-                left: 80%;
-            }
-
-            .hero-text {
-                font-size: 1.5em;
-            }
-
-            .down-links {
-                font-size: 1em;
-            }
-        }
-    }
 
     // THIRD SECTION
     .about-me-section {
@@ -1008,28 +1066,18 @@ screen and (min-height: 800px) {
 
 @media screen and (max-width: 350px) {
     .hero-section {
-        .hero-content-container {
-            padding-top: 15em;
+        .hero-section-content {
+            font-size: 1em;
+        }
 
-            .hero-nav-links {
-                position: absolute;
-                top: 0%;
-                left: 80%;
-            }
-
-            .hero-text {
-                font-size: 1.2em;
-            }
-
-            .down-links {
-                font-size: .8em;
-            }
+        nav {
+            font-size: 1.2em;
         }
     }
 
     // SECOND SECTION CONTAINER
     .second-section {
-        height: 70vh;
+        height: 80vh;
 
         .second-section-content {
             .second-section-text-container {
@@ -1058,6 +1106,22 @@ screen and (min-height: 800px) {
 
                 .rotating-link {
                     font-size: .8em;
+                }
+            }
+        }
+    }
+
+    // TECHNICAL WRITING SECTION
+    .technical-writing-section {
+        .technical-writing-section-content {
+            .technical-writing-section-heading {
+                font-size: 1.2em;
+            }
+
+            .articles-container {
+                .article {
+                    height: 13em;
+                    width: 16em;
                 }
             }
         }
