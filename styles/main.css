@@ -38,6 +38,7 @@ a:hover {
 
 .hero-section {
   height: 100vh;
+  max-width: 100%;
   background: #dddddd;
   display: flex;
   align-items: center;
@@ -47,13 +48,6 @@ a:hover {
 }
 .hero-section .hero-section-content {
   font-size: 3em;
-}
-.hero-section .hero-section-content .hero-text {
-  height: 2em;
-}
-.hero-section .hero-section-content .ideas,
-.hero-section .hero-section-content .life {
-  color: #555555;
 }
 .hero-section .hero-section-content .notification {
   font-size: 0.5em;
@@ -107,7 +101,7 @@ a:hover {
   justify-content: center;
   height: 90vh;
   padding: 4em;
-  width: 90%;
+  width: 80%;
   display: flex;
   background-color: #cccccc;
   transform: translateY(-120%);
@@ -118,7 +112,7 @@ a:hover {
   z-index: 100000;
 }
 .hero-section nav svg {
-  color: black;
+  color: #aaaaaa;
 }
 .hero-section nav .close {
   position: absolute;
@@ -128,7 +122,7 @@ a:hover {
   width: 1em;
 }
 .hero-section nav ul li a {
-  background: linear-gradient(0deg, #555555, #555555);
+  background: linear-gradient(0deg, black, black);
   background-repeat: no-repeat;
   background-size: 0 2px;
   background-position: bottom;
@@ -139,11 +133,10 @@ a:hover {
   align-items: center;
 }
 .hero-section nav ul li a:hover {
-  background: linear-gradient(0deg, #777777, #777777);
+  background: linear-gradient(0deg, black, black);
   background-repeat: no-repeat;
   background-size: 100% 2px;
   background-position: bottom;
-  color: #777777;
 }
 
 /* SECOND SECTION */
@@ -200,7 +193,7 @@ a:hover {
   top: 0;
   height: 100%;
   width: 50%;
-  background: #555555;
+  background: #2c3e50;
 }
 .second-section .second-section-content .arrows-container .arrow:before {
   left: 0;
@@ -309,10 +302,6 @@ a:hover {
   font-family: "Helmet";
   color: #aaaaaa;
   font-weight: 700;
-  display: block;
-}
-.projects-section .projects-section-content-container .projects-heading img {
-  display: inline-block;
 }
 .projects-section .projects-section-content-container .projects-heading img {
   width: 1em;
@@ -370,7 +359,6 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 4em;
 }
 .individual-project .project-description .project-title .view-project {
   display: flex;
@@ -424,6 +412,7 @@ a:hover {
 }
 
 .technical-writing-section {
+  height: 100vh;
   background-color: #cccccc;
   font-family: "Helmet";
   padding: 1em 6em;
@@ -440,37 +429,9 @@ a:hover {
   margin-bottom: -1em;
   transform: rotate(20deg);
 }
-.technical-writing-section .technical-writing-section-content .articles-container {
-  padding: 6em 0;
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-.technical-writing-section .technical-writing-section-content .articles-container .article {
-  display: flex;
-  align-items: center;
-  height: 15em;
-  width: 18em;
-  border-radius: 50px;
-  border: 2px solid #aaaaaa;
-  padding: 2em;
-  text-align: center;
-}
-.technical-writing-section .technical-writing-section-content .articles-container .article:hover {
-  border: 2px solid #555555;
-  color: #555555;
-}
-.technical-writing-section .technical-writing-section-content .articles-container .explore-articles {
-  justify-self: center;
-  align-self: center;
-  padding-left: 4em;
-  display: inline-block;
-}
-.technical-writing-section .technical-writing-section-content .articles-container .explore-articles svg {
-  width: 1em;
-}
 
 .contact {
+  height: 100vh;
   background-color: #dddddd;
   font-family: "Poppins";
   position: relative;
@@ -493,8 +454,7 @@ a:hover {
 }
 .contact .send-email:hover {
   transform: scale(0.9);
-  color: #dddddd;
-  background-color: #999999;
+  color: #aaaaaa;
 }
 .contact .icons {
   position: absolute;
@@ -519,13 +479,25 @@ a:hover {
 }
 
 @media screen and (max-width: 1150px) {
+  .preloader-text {
+    font-size: 2em;
+  }
+  .hero-section {
+    padding: 2em 4em;
+  }
+  .hero-section .hero-content-container {
+    padding-top: 18em;
+  }
+  .hero-section .hero-content-container .down-links {
+    width: 100%;
+  }
   .second-section .second-section-content .second-section-text-container {
-    font-size: 4em;
+    font-size: 5em;
     padding-left: 0.5em;
     padding-top: 1em;
   }
   .second-section .second-section-content .bitmoji {
-    left: 40%;
+    left: 50%;
     top: 10%;
     position: absolute;
   }
@@ -548,18 +520,17 @@ a:hover {
   }
 }
 @media screen and (max-width: 900px) {
-  .hero-section .hero-section-content {
-    padding: 0 2em;
-    font-size: 1.5em;
-  }
-  .hero-section .hero-section-content .hero-text {
-    font-size: 2em;
-  }
-  .hero-section .hero-section-content .notification {
+  .hero-content-container .hero-nav-links {
     font-size: 1em;
   }
+  .hero-content-container .down-links {
+    width: 100%;
+  }
+  .hero-section .hero-text {
+    font-size: 2em;
+  }
   .second-section {
-    height: 80vh;
+    height: 50vh;
   }
   .second-section .second-section-content .second-section-text-container {
     font-size: 4em;
@@ -607,46 +578,35 @@ a:hover {
     font-size: 0.7em;
     align-self: flex-end;
   }
-  .technical-writing-section {
-    padding: 1em 4em;
-  }
-  .technical-writing-section .technical-writing-section-content .technical-writing-section-heading {
-    font-size: 2.5em;
-    text-align: center;
-    display: inline-block;
-  }
-  .technical-writing-section .technical-writing-section-content .articles-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2em;
-  }
-  .technical-writing-section .technical-writing-section-content .articles-container .explore-articles {
-    padding-top: 4em;
-    padding-left: 0;
-  }
-  .contact {
-    padding: 4em 6em;
-    height: 70vh;
-  }
   .contact .contact-heading {
-    font-size: 3em;
+    font-size: 3.5em;
   }
 }
 @media screen and (max-width: 500px) {
+  .loader .preloader-text {
+    font-size: 3em;
+  }
   .hero-section {
     padding: 1em;
-    justify-content: flex-start;
   }
-  .hero-section .hero-section-content {
-    font-size: 1.2em;
-    padding: 0 1em;
+  .hero-section .hero-content-container {
+    grid-template-columns: 1fr;
+    gap: 1em;
   }
-  .hero-section nav {
-    font-size: 1.5em;
+  .hero-section .hero-content-container .hero-nav-links {
+    font-size: 1em;
+    position: absolute;
+    top: -40%;
+    left: 80%;
+  }
+  .hero-section .hero-content-container .hero-text {
+    font-size: 1.7em;
+    text-align: justify;
+    width: 100%;
   }
   .second-section {
     padding: 1em;
-    height: 70vh;
+    height: 50vh;
   }
   .second-section .second-section-content .second-section-text-container {
     font-size: 2.5em;
@@ -703,9 +663,6 @@ a:hover {
   .projects-section .projects-list .individual-project .project-info .project-features h3 {
     padding: 1em 0em;
   }
-  .rotating-link {
-    font-size: 1.2em;
-  }
   .rotating-link a {
     padding-left: 0em;
     font-size: 1.5em;
@@ -713,18 +670,6 @@ a:hover {
   .second-rotating-link a {
     padding-left: 0em;
     font-size: 1em;
-  }
-  .second-rotating-link a svg {
-    width: 1em;
-  }
-  .technical-writing-section .technical-writing-section-content .technical-writing-section-heading {
-    padding-top: 2em;
-    font-size: 1.5em;
-  }
-  .technical-writing-section .technical-writing-section-content .articles-container {
-    display: flex;
-    flex-direction: column;
-    padding: 4em 0;
   }
   .contact {
     padding: 10em 1em;
@@ -742,6 +687,16 @@ a:hover {
   }
 }
 @media screen and (max-width: 400px) {
+  .hero-section .hero-content-container .hero-nav-links {
+    top: -30%;
+    left: 80%;
+  }
+  .hero-section .hero-content-container .hero-text {
+    font-size: 1.5em;
+  }
+  .hero-section .hero-content-container .down-links {
+    font-size: 1em;
+  }
   .about-me-section .about-me-section-content img {
     width: 20em;
   }
@@ -768,14 +723,22 @@ a:hover {
   }
 }
 @media screen and (max-width: 350px) {
-  .hero-section .hero-section-content {
-    font-size: 1em;
+  .hero-section .hero-content-container {
+    padding-top: 15em;
   }
-  .hero-section nav {
+  .hero-section .hero-content-container .hero-nav-links {
+    position: absolute;
+    top: 0%;
+    left: 80%;
+  }
+  .hero-section .hero-content-container .hero-text {
     font-size: 1.2em;
   }
+  .hero-section .hero-content-container .down-links {
+    font-size: 0.8em;
+  }
   .second-section {
-    height: 80vh;
+    height: 70vh;
   }
   .second-section .second-section-content .second-section-text-container {
     font-size: 2em;
@@ -791,13 +754,6 @@ a:hover {
   }
   .about-me-section .about-me-section-content .about-me-section-text-container .rotating-link {
     font-size: 0.8em;
-  }
-  .technical-writing-section .technical-writing-section-content .technical-writing-section-heading {
-    font-size: 1.2em;
-  }
-  .technical-writing-section .technical-writing-section-content .articles-container .article {
-    height: 13em;
-    width: 16em;
   }
   .contact {
     padding: 4em 1em;
