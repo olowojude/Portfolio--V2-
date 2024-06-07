@@ -13,7 +13,7 @@ function frame(){
         clearInterval(id)
         load.play();
         document.querySelector('.loader').style.display = "None"
-        document.querySelector('.container').style.display = "grid"
+        document.querySelector('.container').style.display = "block"
     }
     else{
         width++;
