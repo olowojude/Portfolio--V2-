@@ -135,7 +135,10 @@ a {
         padding: 4em;
         width: 90%;
         display: flex;
-        background-color: #cccccc;
+        // background-color: #cccccc;
+        background: rgba(255, 255, 255, .1);
+        backdrop-filter: blur(20px);
+        border: 2px solid rgba(255, 255, 255, .1);
         transform: translateY(-120%);
         position: absolute;
         transition: 1s;
