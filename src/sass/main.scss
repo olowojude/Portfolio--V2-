@@ -46,9 +46,43 @@ a {
 }
 
 // PRELOADER
+.loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 50;
+    background-color: #cccccc;
+}
+#percent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "DM Sans", sans-serif;
+    height: 100vh;
+    width: 100%;
+    color: #aaaaaa;    
+    font-size: 7em;
+    font-weight: lighter;
+    font-style: italic;
+    mix-blend-mode: difference;
+}
+#bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+#barconfirm{
+    width: 0%;
+    height: 100vh;
+    background: #dddddd;
+}
+
 
 // HERO SECTION
-
 .hero-section {
     height: 100vh;
     background: #dddddd;
@@ -139,7 +173,7 @@ a {
         background: rgba(255, 255, 255, .1);
         backdrop-filter: blur(20px);
         border: 2px solid rgba(255, 255, 255, .1);
-        transform: translateY(-120%);
+        transform: translateX(-120%);
         position: absolute;
         transition: 1s;
         border-radius: .5em;

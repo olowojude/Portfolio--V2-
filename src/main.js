@@ -3,9 +3,57 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
-let tl = gsap.timeline()
+// Function to display the numbers for the preloader
+var id, width = 1;
+function loading(){
+    id = setInterval(frame, 50);
+}
+function frame(){
+    if(width>=100){
+        clearInterval(id)
+        load.play();
+        document.querySelector('.loader').style.display = "None"
+        document.querySelector('.container').style.display = "grid"
+    }
+    else{
+        width++;
+        document.getElementById("barconfirm").style.width = width + '%';
+        document.getElementById("percent").innerHTML = width + '%';
+        document.querySelector('.container').style.display = "None"
+    }
+}
+window.onload = function(){
+    loading();
+}
 
-tl.from(".hero-text", {
+
+// Preloader animation
+const load = gsap.timeline({
+    paused: "true"
+})
+load.to("#percent , #bar", {
+    duration: .2,
+    opacity: 0,
+    zIndex: -1
+})
+load.to(".progress",{
+    duration: .8,
+    width: "0%"
+})
+load.from(".content", {
+    duration: .8,
+    opacity: 0,
+    ease: "Power4.out"
+}, "-=.5")
+load.from(".content h1", {
+    duration: .5,
+    y: 50,
+    skewY: 10,
+    opacity: 0
+},"-=1")
+
+// The below animation is for the hero section and will continue after the loading has stopped
+load.from(".hero-text", {
     y: "50%",
     ease: "power4.easeOut",
     opacity: 0,
@@ -40,8 +88,6 @@ gsap.from(".about-me-section-text-container", {
         start: "top 90%",
     }
 }, 0.15)
-
-
 gsap.from(".projects-heading", {
     x: -500,
     duration: .5,
@@ -52,8 +98,8 @@ gsap.from(".projects-heading", {
 
     }
 })
-// projects section
 
+// projects section
 gsap.from(".projects-list", {
     duration: 1.5,
     y: 500,
@@ -65,13 +111,10 @@ gsap.from(".projects-list", {
     }
 })
 
-
-
 // Technical writing section
 gsap.from(".article-1", {
     duration: 1,
     x: 1000,
-    // ease: "bounce.out",
     scrollTrigger: {
         trigger: ".articles-container",
         toggleActions: "play reset play reset",
@@ -130,12 +173,11 @@ gsap.from(".contact-heading", {
 const menu = document.querySelector(".menu")
 const close = document.querySelector(".close")
 
+
 menu.addEventListener("click", () => {
     document.querySelector('.nav').style.transform = "translateX(0%)"
 })
 
 close.addEventListener("click", () => {
-    document.querySelector('.nav').style.transform = "translateY(-120%)"
+    document.querySelector('.nav').style.transform = "translateX(-120%)"
 })
-
-// Preloader animation
