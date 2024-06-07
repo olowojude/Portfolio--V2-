@@ -2,18 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="./assets/images/bitmoji.png" /> -->
+    <link rel="icon" type="image/svg+xml" href="./assets/images/bitmoji.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/styles/main.css" />
     <title>Olowo Jude</title>
   </head>
   <body>
-
     <!-- FIRST SECTION -->
     <div class="container">
-      <section class="hero-section">
+      <section class="hero-section" id="home">
         <div class="hero-section-content">
-
           <div class="notification">
             <div class="dot"></div>
             <span class="alert">Currently open to new roles</span>
@@ -34,35 +38,50 @@
           </a>
 
           <h1 class="hero-text">
-            <span class="hero-text-span">I love bringing <span class="ideas">ideas</span> to <span class="life">life</span> <br /> with code</span>
+            <span class="hero-text-span"
+              >I love bringing <span class="ideas">ideas</span> to
+              <span class="life">life</span> <br />
+              with code
+            </span>
           </h1>
         </div>
 
         <nav class="nav">
           <a href="#" class="close">
-            <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <g clip-path="url(#clip0_1_20121)">
-              <path d="M7 7.00006L17 17.0001M7 17.0001L17 7.00006" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path
+                  d="M7 7.00006L17 17.0001M7 17.0001L17 7.00006"
+                  stroke="#555555"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </g>
               <defs>
-              <clipPath id="clip0_1_20121">
-              <rect width="24" height="24"/>
-              </clipPath>
+                <clipPath id="clip0_1_20121">
+                  <rect width="24" height="24" />
+                </clipPath>
               </defs>
             </svg>
           </a>
           <ul class="nav-list">
             <li>
-              <div class="mask"><a href="#">HOME</a></div>
+              <div class="mask"><a href="#home">HOME</a></div>
             </li>
             <li>
-              <div class="mask"><a href="#">ABOUT</a></div>
+              <div class="mask"><a href="#about">ABOUT ME</a></div>
             </li>
             <li>
-              <div class="mask"><a href="#">PROJECTS</a></div>
+              <div class="mask"><a href="#projects">MY WORKS</a></div>
             </li>
             <li>
-              <div class="mask"><a href="#">SAY HELLO?</a></div>
+              <div class="mask"><a href="#contact">CONTACT</a></div>
             </li>
           </ul>
         </nav>
@@ -85,7 +104,7 @@
       </section>
 
       <!-- THIRD SECTION -->
-      <section class="about-me-section">
+      <section class="about-me-section" id="about">
         <div class="about-me-section-content">
           <img class="my-pic" src="./assets/images/my pic 5.jpg" alt="" />
           <div class="about-me-section-text-container">
@@ -96,12 +115,13 @@
               >
             </div>
             <p class="about-me-section-paragragh">
-              I'm a full-stack developer passionate about problem-solving and
-              creating innovative solutions to enhance user experience. With
-              expertise in backend optimization and technical writing skills, I
-              bring ideas to life through code, either independently or
-              collaboratively. <br />
-              Let's work together to make your ideas a reality.
+              As a full stack developer, my expertise lies in crafting intuitive
+              frontend interfaces, responsive designs, fast and secure backend
+              architectures, and API integration and microservices.
+              Additionally, I'm a skilled technical writer, able to craft clear
+              and concise documentation, user-friendly guides, and engaging
+              content. With my unique combination of skills, i bring ideas to
+              life, either independently or collaboratively. <br />
             </p>
             <span class="rotating-link">
               <a href="mailto:judeolowo1@gmail.com">
@@ -126,10 +146,15 @@
       </section>
 
       <!-- Project section -->
-      <section id="projects" class="projects-section">
+      <section id="projects" class="projects-section" id="projects">
         <div class="projects-section-content-container">
           <span class="projects-heading"
-            >My Works <img class="hand-image" src="./assets/images/hand-left..webp" alt="" />
+            >My Works
+            <img
+              class="hand-image"
+              src="./assets/images/hand-left..webp"
+              alt=""
+            />
           </span>
         </div>
         <div class="projects-list">
@@ -142,11 +167,22 @@
               <div class="project-title">
                 <h1>My Blog</h1>
                 <div class="view-project">
-                  <a href="https://jude-olowo-blog.up.railway.app/"
+                  <a href="https://github.com/olowojude/My-blog"
                     >Live site
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M29 3L3 15L15 17.5M29 3L19 29L15 17.5M29 3L15 17.5" stroke="#aaaaaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg></a
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M29 3L3 15L15 17.5M29 3L19 29L15 17.5M29 3L15 17.5"
+                        stroke="#aaaaaa"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      /></svg></a
                   ><br />
                 </div>
               </div>
@@ -173,11 +209,22 @@
               <div class="project-title">
                 <h1>Link-It</h1>
                 <div class="view-project">
-                  <a href="https://jude-olowo-blog.up.railway.app/"
+                  <a href="https://github.com/olowojude/Link-it"
                     >Live site
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M29 3L3 15L15 17.5M29 3L19 29L15 17.5M29 3L15 17.5" stroke="#2E4454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg></a
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M29 3L3 15L15 17.5M29 3L19 29L15 17.5M29 3L15 17.5"
+                        stroke="#2E4454"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      /></svg></a
                   ><br />
                 </div>
               </div>
@@ -186,12 +233,12 @@
                   <h3 class="project-overview">Project Overview</h3>
                   Link-It is a LinkTree clone, that allows users to create
                   personalized landing pages where they can manage all their
-                  online links and social media pages. Features include
-                  user authentication, user profile functionality, allowing
-                  users to create and manage their profiles(profile images are
-                  also supported). It also includes a forgotten password feature
-                  that allows users to easily reset their old password and
-                  regain access to their account.
+                  online links and social media pages. Features include user
+                  authentication, user profile functionality, allowing users to
+                  create and manage their profiles(profile images are also
+                  supported). It also includes a forgotten password feature that
+                  allows users to easily reset their old password and regain
+                  access to their account.
                 </span>
                 <span class="project-stack"
                   >HTML, SCSS, JavaScript, Django, PostgreSQL</span
@@ -201,40 +248,26 @@
           </section>
           <div class="horizontal-line hr-2"></div>
 
-          <!-- 3RD PROJECT -->
-          <section class="individual-project project-3">
-            <img src="./assets/images/meme-generator.png" alt="" />
-            <div class="project-description">
-              <div class="project-title">
-                <h1>Meme Generator</h1>
-                <div class="view-project">
-                  <a href="https://jude-olowo-blog.up.railway.app/"
-                    >Live site
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M29 3L3 15L15 17.5M29 3L19 29L15 17.5M29 3L15 17.5" stroke="#2E4454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg></a
-                  ><br />
-                </div>
-              </div>
-              <div class="project-info">
-                <span class="project-features">
-                  <h3 class="project-overview">Project Overview</h3>
-                  A Meme Generator that generates random memes images for users
-                  and allows them create memes using those images. An additional
-                  feature i'm working on is for users to be able to download
-                  whatever meme they've created.
-                </span>
-                <span class="project-stack">HTML, SCSS, React JS</span>
-              </div>
-            </div>
-          </section>
           <!-- END OF PROJECTS SECTION -->
           <section>
             <div class="horizontal-line"></div>
-            <span class="rotating-link second-rotating-link" id="second-rotating-link">
-              <a href="/pages/projects.html" class="explore-link">Explore
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M29 3L3 15L15 17.5M29 3L19 29L15 17.5M29 3L15 17.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <span class="rotating-link explore-link">
+              <a href="/projects.html" class="explore-link"
+                >Explore more
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M29 3L3 15L15 17.5M29 3L19 29L15 17.5M29 3L15 17.5"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </a>
             </span>
@@ -246,16 +279,50 @@
       <section class="technical-writing-section">
         <div class="technical-writing-section-content">
           <span class="technical-writing-section-heading"
-            >Selected technical articles <img src="./assets/images/hand-with-watch.png" alt="" />
+            >Selected technical articles
+            <img src="./assets/images/hand-with-watch.png" alt="" />
           </span>
 
           <div class="articles-container">
-            <a class="article article-1" href="http://"><span>How to integrate Tailwind CSS into your Django project</span></a>
-            <a class="article article-2" href="http://"><span>Why you should do this in your technical article</span></a>
-            <a class="article article-3" href="http://"><span>Should I learn Artificial Intelligence?</span></a>
-            <a href="/pages/projects.html" class="explore-link explore-articles">Explore more articles
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M29 3L3 15L15 17.5M29 3L19 29L15 17.5M29 3L15 17.5" stroke="#2E4454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- 1st article -->
+            <a
+              class="article article-1"
+              href="https://judeolowo.hashnode.dev/how-to-integrate-tailwind-css-into-your-django-project"
+              ><span
+                >How to integrate Tailwind CSS into your Django Project</span
+              ></a
+            >
+            <!-- 2nd article -->
+            <a
+              class="article article-2"
+              href="https://judeolowo.hashnode.dev/open-source-contributions-made-easy-a-hacktoberfest-guide-for-beginners"
+              ><span
+                >Open Source Contributions Made Easy: A Hacktoberfest Guide for
+                Beginners</span
+              ></a
+            >
+            <!-- 3rd article -->
+            <!-- <a class="article article-3" href="http://"
+              ><span>Should I learn Artificial Intelligence?</span></a
+            > -->
+
+            <!-- Explore more articles -->
+            <a href="/pages/projects.html" class="explore-link explore-articles"
+              >Explore more articles
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M29 3L3 15L15 17.5M29 3L19 29L15 17.5M29 3L15 17.5"
+                  stroke="#2E4454"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </a>
           </div>
@@ -270,25 +337,40 @@
         <a class="send-email" href="mailto:judeolowo1@gmail.com">Contact me</a>
 
         <div class="icons">
+          <!-- github icon -->
           <a href="https://github.com/olowojude"
-            ><img class="icon" src="./assets/icons/icons8-github.svg" alt=""
+            ><img
+              class="icon"
+              src="https://img.icons8.com/?size=100&id=zehXPLJSAbBB&format=png&color=000000"
+              alt=""
           /></a>
+          <!-- linkedin icon -->
           <a href="https://www.linkedin.com/in/Jude-olowo-397570232"
             ><img
               class="icon"
-              src="./assets/icons/icons8-linkedin-circled.svg"
+              src="https://img.icons8.com/?size=100&id=9pFq5Dj6Mz1d&format=png&color=000000"
               alt=""
           /></a>
-          <a href="https://judeolowo.hashnode.dev/"
-            ><img class="icon" src="./assets/icons/icons8-hashnode.svg" alt=""
-          /></a>
+
+          <!-- hashnode icon -->
+          <a href="https://judeolowo.hashnode.dev/">
+            <img
+              class="icon"
+              src="https://img.icons8.com/?size=100&id=HnB8zGOh5xgd&format=png&color=000000"
+              alt=""
+            />
+          </a>
+          <!-- Twitter icon -->
           <a href="https://twitter.com/jude_olowo/"
-            ><img class="icon" src="./assets/icons/icons8-twitter.svg" alt=""
+            ><img
+              class="icon"
+              src="https://img.icons8.com/?size=100&id=et1i0Ji7G7Va&format=png&color=000000"
+              alt=""
           /></a>
         </div>
       </section>
       <hr />
-      
+
       <section class="footer">
         <span>Olowo Jude</span> <br />
         <a href="#home" class="back-to-top">Back to top</a>
