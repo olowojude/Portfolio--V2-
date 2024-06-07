@@ -52,18 +52,17 @@ a {
     left: 0;
     width: 100%;
     height: 100vh;
-    // z-index: 50;
+    z-index: 50;
     background-color: #cccccc;
 }
 #percent{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
     height: 100vh;
-    color: #aaaaaa;    
+    color: white;    
     font-size: 7em;
-    // font-weight: 700;
     font-weight: lighter;
     font-style: italic;
     mix-blend-mode: difference;
@@ -73,12 +72,12 @@ a {
     top: 0;
     left: 0;
     height: 100vh;
-    max-width: 100%;
+    width: 100%;
 }
 #barconfirm{
     width: 0%;
     height: 100vh;
-    background: #dddddd;
+    background: #aaaaaa;
 }
 
 

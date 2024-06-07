@@ -6,20 +6,21 @@ gsap.registerPlugin(ScrollTrigger);
 // Function to display the numbers for the preloader
 var id, width = 1;
 function loading(){
+    document.querySelector('.container').style.display = "none"
     id = setInterval(frame, 50);
 }
 function frame(){
     if(width>=100){
         clearInterval(id)
         load.play();
-        document.querySelector('.loader').style.display = "None"
+        document.querySelector('.loader').style.display = "none"
         document.querySelector('.container').style.display = "block"
     }
     else{
         width++;
         document.getElementById("barconfirm").style.width = width + '%';
         document.getElementById("percent").innerHTML = width + '%';
-        document.querySelector('.container').style.display = "None"
+        document.querySelector('.container').style.display = "none"
     }
 }
 window.onload = function(){
@@ -57,8 +58,25 @@ load.from(".hero-text", {
     y: "50%",
     ease: "power4.easeOut",
     opacity: 0,
-    delay: .5
+    delay: 1
 }, 0.15)
+load.fromTo(".menu", {
+    ease: "power4.easeOut",
+    opacity: 0,
+    delay: 1
+    }, {
+    duration: 2, 
+    opacity: 1
+}, 1)
+load.fromTo(".notification", {
+    y: "100%",
+    ease: "power4.easeOut",
+    opacity: 0,
+    delay: 3
+    }, {
+    y: "0%",
+    opacity: 1
+}, 2)
 
 gsap.from(".second-section-text-container", {
     x: -500,
@@ -106,7 +124,7 @@ gsap.from(".projects-list", {
     opacity: 0,
     scrollTrigger: {
         trigger: ".projects-section",
-        start: "top 90%",
+        start: "top 80%",
 
     }
 })
