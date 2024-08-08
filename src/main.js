@@ -190,12 +190,23 @@ gsap.from(".contact-heading", {
 // Navbar Toggle
 const menu = document.querySelector(".menu")
 const close = document.querySelector(".close")
+const nav = document.querySelector(".nav")
 
 
 menu.addEventListener("click", () => {
-    document.querySelector('.nav').style.transform = "translateX(0%)"
+    nav.style.transform = "translateX(0%)"
 })
 
 close.addEventListener("click", () => {
-    document.querySelector('.nav').style.transform = "translateX(-120%)"
+    nav.style.transform = "translateX(-120%)"
 })
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting && nav.style.transform === "translateX(0%)") {
+            nav.style.transform = "translateX(-120%)";
+        }
+    });
+}, { threshold: 0 });
+observer.observe(nav);
+
