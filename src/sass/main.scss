@@ -581,10 +581,10 @@ a {
             color: #aaaaaa;
 
             img {
-                width: 2em;
+                width: 3em;
                 display: inline-block;
-                margin-bottom: -1em;
-                transform: rotate(20deg);
+                vertical-align: middle;
+                transform: rotate(5deg);
             }
         }
 
@@ -640,6 +640,12 @@ a {
         font-weight: 700;
         color: #aaaaaa;
         text-align: center;
+
+        .bitmoji-2 {
+            width: 2em;
+            vertical-align: bottom;
+            transform: rotate(5deg);
+        }
     }
 
     .send-email {
@@ -908,6 +914,10 @@ screen and (min-height: 800px) {
             padding: 0 1em;
         }
 
+        .notification {
+            font-size: .8em;
+        }
+
         nav {
             font-size: 1.5em;
         }
@@ -1069,6 +1079,13 @@ screen and (min-height: 800px) {
 }
 
 @media screen and (max-width: 400px) {
+    .hero-section {
+        .hero-section-content {
+            .notification {
+                font-size: .8em;
+            }
+        }
+    }
 
     // HERO SECTION
 
@@ -1133,6 +1150,10 @@ screen and (min-height: 800px) {
     .hero-section {
         .hero-section-content {
             font-size: 1em;
+
+            .notification {
+                font-size: .8em;
+            }
         }
 
         nav {

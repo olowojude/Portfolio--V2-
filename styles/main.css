@@ -467,10 +467,10 @@ a:hover {
   color: #aaaaaa;
 }
 .technical-writing-section .technical-writing-section-content .technical-writing-section-heading img {
-  width: 2em;
+  width: 3em;
   display: inline-block;
-  margin-bottom: -1em;
-  transform: rotate(20deg);
+  vertical-align: middle;
+  transform: rotate(5deg);
 }
 .technical-writing-section .technical-writing-section-content .articles-container {
   padding: 6em 0;
@@ -513,6 +513,11 @@ a:hover {
   font-weight: 700;
   color: #aaaaaa;
   text-align: center;
+}
+.contact .contact-heading .bitmoji-2 {
+  width: 2em;
+  vertical-align: bottom;
+  transform: rotate(5deg);
 }
 .contact .send-email {
   display: block;
@@ -695,6 +700,9 @@ a:hover {
     font-size: 1.2em;
     padding: 0 1em;
   }
+  .hero-section .notification {
+    font-size: 0.8em;
+  }
   .hero-section nav {
     font-size: 1.5em;
   }
@@ -796,6 +804,9 @@ a:hover {
   }
 }
 @media screen and (max-width: 400px) {
+  .hero-section .hero-section-content .notification {
+    font-size: 0.8em;
+  }
   .about-me-section .about-me-section-content img {
     width: 20em;
   }
@@ -824,6 +835,9 @@ a:hover {
 @media screen and (max-width: 350px) {
   .hero-section .hero-section-content {
     font-size: 1em;
+  }
+  .hero-section .hero-section-content .notification {
+    font-size: 0.8em;
   }
   .hero-section nav {
     font-size: 1.2em;
