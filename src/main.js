@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 var id, width = 1;
 function loading(){
     document.querySelector('.container').style.display = "none"
-    id = setInterval(frame, 50);
+    id = setInterval(frame, 30);
 }
 function frame(){
     if(width>=100){

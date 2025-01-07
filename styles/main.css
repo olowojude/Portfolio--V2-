@@ -482,7 +482,7 @@ a:hover {
   display: flex;
   align-items: center;
   height: 15em;
-  width: 18em;
+  width: 16em;
   border-radius: 50px;
   border: 2px solid #aaaaaa;
   padding: 2em;
@@ -505,6 +505,7 @@ a:hover {
 .contact {
   background-color: #dddddd;
   font-family: "Poppins";
+  text-align: center;
   position: relative;
   padding: 8em 6em;
 }
@@ -512,12 +513,25 @@ a:hover {
   font-size: 4em;
   font-weight: 700;
   color: #aaaaaa;
-  text-align: center;
+  padding-bottom: 2em;
+}
+.contact .contact-heading .inline-text1 {
+  color: #777777;
+}
+.contact .contact-heading .inline-text2 {
+  text-decoration: underline;
+  color: #777777;
 }
 .contact .contact-heading .bitmoji-2 {
   width: 2em;
   vertical-align: bottom;
   transform: rotate(5deg);
+}
+.contact .contact-text {
+  display: inline-block;
+  color: #aaaaaa;
+  font-weight: 500;
+  font-size: 1.5em;
 }
 .contact .send-email {
   display: block;
@@ -690,6 +704,9 @@ a:hover {
   .contact .contact-heading {
     font-size: 3em;
   }
+  .contact .contact-text {
+    font-size: 1.2em;
+  }
 }
 @media screen and (max-width: 500px) {
   .hero-section {
@@ -793,7 +810,10 @@ a:hover {
     height: 80vh;
   }
   .contact .contact-heading {
-    font-size: 1.5em;
+    font-size: 1.2em;
+  }
+  .contact .contact-text {
+    font-size: 0.9em;
   }
   .contact .send-email {
     padding: 1.5em 3em;
@@ -871,7 +891,10 @@ a:hover {
     padding: 4em 1em;
   }
   .contact .contact-heading {
-    font-size: 1em;
+    font-size: 0.8em;
+  }
+  .contact .contact-text {
+    font-size: 0.7em;
   }
   .footer {
     font-size: 0.6em;
