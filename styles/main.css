@@ -820,6 +820,7 @@ a:hover {
   .contact .send-email {
     padding: 1.5em 3em;
     border-radius: 20px;
+    font-size: 0.8em;
   }
   .footer {
     font-size: 0.8em;
