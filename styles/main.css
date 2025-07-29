@@ -501,6 +501,11 @@ a:hover {
 .technical-writing-section .technical-writing-section-content .articles-container .explore-articles svg {
   width: 1em;
 }
+.technical-writing-section .technical-writing-section-content .freecodecamp-section {
+  text-align: center;
+  font-size: 2em;
+  padding: 4em;
+}
 
 .contact {
   background-color: #dddddd;
@@ -519,7 +524,6 @@ a:hover {
   color: #777777;
 }
 .contact .contact-heading .inline-text2 {
-  text-decoration: underline;
   color: #777777;
 }
 .contact .contact-heading .bitmoji-2 {
