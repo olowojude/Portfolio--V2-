@@ -445,6 +445,7 @@ a:hover {
   text-align: center;
   font-family: "DM Sans", sans-serif;
   display: block;
+  font-size: 1em;
 }
 .explore-link svg {
   vertical-align: middle;
@@ -481,6 +482,8 @@ a:hover {
 .technical-writing-section .technical-writing-section-content .articles-container .article {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
   height: 15em;
   width: 16em;
   border-radius: 50px;
@@ -515,19 +518,20 @@ a:hover {
   padding: 8em 6em;
 }
 .contact .contact-heading {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 700;
   color: #aaaaaa;
   padding-bottom: 2em;
 }
 .contact .contact-heading .inline-text1 {
-  color: #777777;
+  font-size: 0.5em;
 }
 .contact .contact-heading .inline-text2 {
   color: #777777;
+  font-size: 3em;
 }
 .contact .contact-heading .bitmoji-2 {
-  width: 2em;
+  width: 5em;
   vertical-align: bottom;
   transform: rotate(5deg);
 }

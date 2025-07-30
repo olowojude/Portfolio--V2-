@@ -553,6 +553,7 @@ a {
     text-align: center;
     font-family: "DM Sans", sans-serif;
     display: block;
+    font-size: 1em;
 
 
     svg {
@@ -594,9 +595,12 @@ a {
             align-items: center;
             gap: 1em;
 
+
             .article {
                 display: flex;
                 align-items: center;
+                flex-direction: column;
+                justify-content: space-around;            
                 height: 15em;
                 width: 16em;
                 border-radius: 50px;
@@ -641,18 +645,20 @@ a {
     padding: 8em 6em;
 
     .contact-heading {
-        font-size: 4em;
+        font-size: 3em;
         font-weight: 700;
         color: #aaaaaa;
         padding-bottom: 2em;
         .inline-text1 {
-            color: #777777;
+            // color: #777777;
+            font-size: .5em;
         }
         .inline-text2 {
             color: #777777;
+            font-size: 3em;
         }
         .bitmoji-2 {
-            width: 2em;
+            width: 5em;
             vertical-align: bottom;
             transform: rotate(5deg);
         }

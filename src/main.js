@@ -142,13 +142,13 @@ gsap.from(".article-1", {
 })
 
 gsap.from(".article-2", {
-    duration: 1.5,
+    duration: 2,
     x: 1500,
     opacity: 0,
     scrollTrigger: {
         trigger: ".articles-container",
         toggleActions: "play reset play reset",
-        start: "top 87%",
+        start: "top 85%",
 
     }
 })
@@ -160,7 +160,7 @@ gsap.from(".article-3", {
     scrollTrigger: {
         trigger: ".articles-container",
         toggleActions: "play reset play reset",
-        start: "top 85%",
+        start: "top 80%",
 
     }
 })
