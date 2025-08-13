@@ -515,7 +515,7 @@ a:hover {
   font-family: "Poppins";
   text-align: center;
   position: relative;
-  padding: 8em 6em;
+  padding: 6em;
 }
 .contact .contact-heading {
   font-size: 3em;
@@ -528,7 +528,7 @@ a:hover {
 }
 .contact .contact-heading .inline-text2 {
   color: #777777;
-  font-size: 3em;
+  font-size: 2em;
 }
 .contact .contact-heading .bitmoji-2 {
   width: 5em;
